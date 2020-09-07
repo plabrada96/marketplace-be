@@ -22,10 +22,7 @@ public class Category extends GenericEntity{
 	
 	@Column(name = "status")
 	private Character status;
-	
-	@Column(name = "image")
-	private String image;
-	
+		
 	@Column(name = "description", columnDefinition = "TEXT")
 	private String description;
 	
@@ -50,12 +47,6 @@ public class Category extends GenericEntity{
 	}
 	public void setStatus(StatusType status) {
 		this.status = status.getValue();
-	}
-	public String getImage() {
-		return image;
-	}
-	public void setImage(String image) {
-		this.image = image;
 	}
 	public String getDescription() {
 		return description;
