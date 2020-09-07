@@ -6,7 +6,7 @@ public abstract class SwaggerConstants {
 	public static final String TERMS_URL="";
 	public static final String LICENCE_URL="";
 	public static final String LICENCE="";
-	public static final String NAME_CONTACT="Paola Andrea Labrada España";
+	public static final String NAME_CONTACT="Paola Andrea Labrada";
 	public static final String CONTACT_URL="";
 	public static final String CONTACT_EMAIL="plabrada82@gmail.com";
 	public static final String PACKAGE_CONTROLLER="com.test.marketplace";
