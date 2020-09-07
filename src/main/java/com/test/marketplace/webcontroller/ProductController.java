@@ -2,7 +2,6 @@ package com.test.marketplace.webcontroller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -56,10 +55,6 @@ public class ProductController extends CommonController<Product>{
 	@GetMapping("")
 	@ApiOperation(value = "${swagger.LIST_PRODUCT}")
 	public Page<Product> list(ProductBuilder productBuilder) {
-		if(productBuilder!=null) {
-			return service.list(new CommonSpecifications<Product>(productBuilder));
-		}else {
-			return new PageImpl(service.list());
-		}
+		return service.list(new CommonSpecifications<Product>(productBuilder));
 	}
 }
